@@ -15,8 +15,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <picture><img src="/path236.png" alt="topNavBackground"className={styles.topbackground}/></picture>
+        <picture><img src="/topbg.png" alt="topNavBackground"className={styles.topbackground}/></picture>
         <NavBar/>
+        <div className={styles.container}>
         <div className={styles.description}>
          
           <div>
@@ -115,6 +116,7 @@ export default function Home() {
               with&nbsp;Vercel.
             </p>
           </a>
+        </div>
         </div>
       </main>
     </>

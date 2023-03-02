@@ -19,10 +19,14 @@
   font-family: var(--font-mono);
 }
 .nav {
+  z-index: 1;
   height: 30%;
   width: 100%;
   position: fixed;
   top: 0;
+}
+.container{
+  z-index: -2;
 }
 .profileNav{
   position: absolute;
