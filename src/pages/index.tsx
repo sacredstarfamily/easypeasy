@@ -43,7 +43,7 @@ export default function Home() {
         <div className={styles.center}>
           <Image
             className={styles.logo}
-            src="/wordlogo.png"
+            src="/wordlogo2.png"
             alt="easypeasy Logo"
             width={180}
             height={37}
@@ -51,10 +51,10 @@ export default function Home() {
           />
           <div className={styles.thirteen}>
             <Image
-              src="/thirteen.svg"
+              src="/pdfimg.png"
               alt="13"
               width={40}
-              height={31}
+              height={41}
               priority
             />
           </div>
