@@ -11,13 +11,28 @@
   display: inherit;
   justify-content: inherit;
   align-items: inherit;
+  margin-top: 180px;
   font-size: 0.85rem;
   max-width: var(--max-width);
   width: 100%;
   z-index: 2;
   font-family: var(--font-mono);
 }
-
+.nav {
+  height: 30%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+}
+.profileNav{
+  position: absolute;
+  display: flex;
+  padding: 15px;
+  height: 300px;
+  gap: 0.5rem;
+  top: 0;
+  right: 0px;
+}
 .description a {
   display: flex;
   justify-content: center;
@@ -87,7 +102,14 @@
   height: 360px;
   margin-left: -400px;
 }
-
+.topbackground{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 175px;
+}
 .center::after {
   background: var(--primary-glow);
   width: 240px;
