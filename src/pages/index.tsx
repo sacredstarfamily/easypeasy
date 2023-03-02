@@ -14,10 +14,11 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main}>
-        <picture><img src="/topbg.png" alt="topNavBackground"className={styles.topbackground}/></picture>
+      <picture><img src="/topbg.png" alt="topNavBackground"className={styles.topbackground}/></picture>
         <NavBar/>
-        <div className={styles.container}>
+      <main className={styles.main}>
+        
+        
         <div className={styles.description}>
          
           <div>
@@ -117,7 +118,7 @@ export default function Home() {
             </p>
           </a>
         </div>
-        </div>
+        
       </main>
     </>
   )
