@@ -18,7 +18,7 @@ export default function Home() {
         <NavBar/>
       <main className={styles.main}>
         
-        
+      
         <div className={styles.description}>
          
           <div>
@@ -39,8 +39,9 @@ export default function Home() {
             </a>
           </div>
         </div>
-
+       
         <div className={styles.center}>
+       
           <Image
             className={styles.logo}
             src="/wordlogo2.png"
@@ -59,8 +60,21 @@ export default function Home() {
             />
           </div>
         </div>
+        <div id="signupDiv"className={styles.signupDiv}>
+          
+          <button className={styles.closeBtn}>X</button>
+          <center>
+         <p>Sign Up</p>
+         <input type="text" placeholder='your email' />
+         <br />
+         <input type="password" placeholder="choose password"name="password" id="password" />
+         <br />
+         <input type="password" placeholder="repeat password"name="repeatpass" id="repeatpass" />
+         </center>
 
+         </div>
         <div className={styles.grid}>
+       
           <a
             href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
             className={styles.card}
@@ -118,8 +132,9 @@ export default function Home() {
             </p>
           </a>
         </div>
-        
+      
       </main>
+     
     </>
   )
 }

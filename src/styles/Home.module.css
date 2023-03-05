@@ -38,6 +38,28 @@
   top: 0;
   right: 0px;
 }
+.signupBtn {
+  height: 30px;
+  padding:5px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.loginBtn {
+  height: 30px;
+  padding:5px;
+  border-radius: 5px;
+}
+.signupDiv{
+  z-index: 4;
+  align-items: center;
+  width: 100%;
+  border: 5px solid purple;
+  color: white;
+}
+.closeBtn{
+  top:0px;
+  margin-left:98%;
+}
 .description a {
   display: flex;
   justify-content: center;
