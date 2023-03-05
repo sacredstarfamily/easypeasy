@@ -2,6 +2,7 @@ import 'solana/styles/globals.css'
 import type { AppProps } from 'next/app'
 import {initializeApp} from 'firebase/app';
 import {getAnalytics}from 'firebase/analytics';
+import { useEffect } from 'react';
 const firebaseConfig = {
   apiKey: "AIzaSyA3SXtiznC9W2Vr9U7mFWTDpXXEV5Sy8NI",
   authDomain: "easypeasy-5371a.firebaseapp.com",
@@ -20,6 +21,15 @@ if (typeof window !== 'undefined') {
   console.log('You are on the server,Cannot execute')
  }
 export default function App({ Component, pageProps }: AppProps) {
-  
+  const addPayPal = ()=>{
+    const script = document.createElement("script");
+    script.src = "https://www.paypal.com/sdk/js?client-id=AZ9NtAD_X73bUhwVTNKmr1VpzogjcKCiNe3xXIJpzo7lERcu9HorvdfcpBx2Akwmi36SjL4Ynb3h5SOa&enable-funding=venmo&currency=USD&vault=true&intent=subscription";
+    script.type = "text/javascript";
+    script.async = true;
+    document.body.appendChild(script);
+  }
+  useEffect(()=>{
+    addPayPal()
+  },[]);
   return <Component {...pageProps} />
 }
