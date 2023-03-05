@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from 'solana/styles/Home.module.css'
 import NavBar from './components/navbar'
+import { PayPalButton } from 'react-paypal-button-v2'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
@@ -71,7 +72,12 @@ export default function Home() {
          <br />
          <input type="password" placeholder="repeat password"name="repeatpass" id="repeatpass" />
          </center>
-
+        <PayPalButton
+        amount={10}
+        onSuccess={((details:any, data:any)=>{
+          console.log(details)
+        })}
+        />
          </div>
         <div className={styles.grid}>
        
