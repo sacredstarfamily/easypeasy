@@ -3,6 +3,7 @@ import type { AppProps } from 'next/app'
 import {initializeApp} from 'firebase/app';
 import {getAnalytics}from 'firebase/analytics';
 import { useEffect } from 'react';
+import React from 'react';
 const firebaseConfig = {
   apiKey: "AIzaSyA3SXtiznC9W2Vr9U7mFWTDpXXEV5Sy8NI",
   authDomain: "easypeasy-5371a.firebaseapp.com",
