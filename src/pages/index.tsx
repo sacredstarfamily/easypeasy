@@ -72,27 +72,23 @@ export default function Home() {
          <br />
          <input type="password" placeholder="repeat password"name="repeatpass" id="repeatpass" />
          </center>
-        <PayPalButton
-        amount={10}
-        onSuccess={((details:any, data:any)=>{
-          console.log(details)
-        })}
-        
-        />
+         <center>
          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 <input type="hidden" name="cmd" value="_s-xclick"/>
-<input type="hidden" name="hosted_button_id" value="P7Z9XGS8A8M76"/>
+<input type="hidden" name="hosted_button_id" value="XHV3R67TG5Y3S"/>
 <table>
 <tr><td><input type="hidden" name="on0" value="subscription options"/>subscription options</td></tr><tr><td><select name="os0">
 	<option value="Basic">Basic : $10.00 USD - monthly</option>
-	<option value="premium">premium : $15.00 USD - monthly</option>
-	<option value="plantinum">plantinum : $20.00 USD - monthly</option>
+	<option value="Premium">Premium : $15.00 USD - monthly</option>
+	<option value="Platinum">Platinum : $20.00 USD - monthly</option>
 </select> </td></tr>
 </table>
 <input type="hidden" name="currency_code" value="USD"/>
-<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_subscribeCC_LG.gif" name="submit" alt="PayPal - The safer, easier way to pay online!"/>
-<picture><img alt=""  src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1"/></picture>
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_subscribeCC_LG.gif"  name="submit" alt="PayPal - The safer, easier way to pay online!"/>
+<picture><img alt="" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1"/></picture>
 </form>
+</center>
+
 
          </div>
         <div className={styles.grid}>
