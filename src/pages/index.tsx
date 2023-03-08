@@ -3,10 +3,40 @@ import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from 'solana/styles/Home.module.css'
 import NavBar from './components/navbar'
-import { PayPalButton } from 'react-paypal-button-v2'
+import { useEffect } from 'react'
+import {initializeApp} from 'firebase/app';
+import {getAnalytics}from 'firebase/analytics';
 const inter = Inter({ subsets: ['latin'] })
-
+import React from 'react'
+import { ReactDOM } from 'react'
 export default function Home() {
+  const firebaseConfig = {
+    apiKey: "AIzaSyA3SXtiznC9W2Vr9U7mFWTDpXXEV5Sy8NI",
+    authDomain: "easypeasy-5371a.firebaseapp.com",
+    projectId: "easypeasy-5371a",
+    storageBucket: "easypeasy-5371a.appspot.com",
+    messagingSenderId: "545813621027",
+    appId: "1:545813621027:web:741b015f67f8acba07c496",
+    measurementId: "G-C92WEW7DW1"
+  };
+  
+  if (typeof window !== 'undefined') {
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+    console.log('You are on the browser,You are good to go')
+    } else {
+    console.log('You are on the server,Cannot execute')
+   }
+  const addPayPal = ()=>{
+    const script = document.createElement("script");
+    script.src = "https://www.paypal.com/sdk/js?client-id=AdytsnuuQr8Ywn8oN1gbheEBaWJg688s0__2LiDIeWojycWBnbtfAUWUPVQhSCLQuPxO7Z1e9Mx0V9eE&enable-funding=venmo&currency=USD&vault=true&intent=subscription";
+    script.type = "text/javascript";
+    script.async = true;
+    document.body.appendChild(script);
+  }
+  useEffect(()=>{
+    addPayPal()
+  },[]);
   return (
     <>
       <Head>
@@ -63,32 +93,28 @@ export default function Home() {
         </div>
         <div id="signupDiv"className={styles.signupDiv}>
           
-          <button className={styles.closeBtn}>X</button>
-          <center>
-         <p>Sign Up</p>
-         <input type="text" placeholder='your email' />
-         <br />
-         <input type="password" placeholder="choose password"name="password" id="password" />
-         <br />
-         <input type="password" placeholder="repeat password"name="repeatpass" id="repeatpass" />
-         </center>
+          <button className={styles.closeBtn}onClick={()=>{document.getElementById("signupDiv")!.style.display="none"}}>X</button>
+          <div>
          <center>
-         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-<input type="hidden" name="cmd" value="_s-xclick"/>
-<input type="hidden" name="hosted_button_id" value="XHV3R67TG5Y3S"/>
-<table>
-<tr><td><input type="hidden" name="on0" value="subscription options"/>subscription options</td></tr><tr><td><select name="os0">
-	<option value="Basic">Basic : $10.00 USD - monthly</option>
-	<option value="Premium">Premium : $15.00 USD - monthly</option>
-	<option value="Platinum">Platinum : $20.00 USD - monthly</option>
-</select> </td></tr>
-</table>
-<input type="hidden" name="currency_code" value="USD"/>
-<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_subscribeCC_LG.gif"  name="submit" alt="PayPal - The safer, easier way to pay online!"/>
-<picture><img alt="" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1"/></picture>
-</form>
+  <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+    <input type="hidden" name="cmd" value="_s-xclick"/>
+    <input type="hidden" name="hosted_button_id" value="XHV3R67TG5Y3S"/>
+   <table>
+    <tbody>
+    <tr><td><input type="hidden" name="on0" value="subscription options"/>subscription options</td></tr>
+    <tr><td><select name="os0">
+	   <option value="Basic">Basic : $10.00 USD - monthly</option>
+	   <option value="Premium">Premium : $15.00 USD - monthly</option>
+	   <option value="Platinum">Platinum : $20.00 USD - monthly</option>
+   </select></td></tr>
+   </tbody>
+   </table>
+    <input type="hidden" name="currency_code" value="USD"/>
+   <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_subscribeCC_LG.gif"  name="submit" alt="PayPal - The safer, easier way to pay online!"/>
+   <picture><img alt="" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1"/></picture>
+  </form>
 </center>
-
+</div>
 
          </div>
         <div className={styles.grid}>
