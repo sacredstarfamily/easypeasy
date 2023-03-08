@@ -77,7 +77,23 @@ export default function Home() {
         onSuccess={((details:any, data:any)=>{
           console.log(details)
         })}
+        
         />
+         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick"/>
+<input type="hidden" name="hosted_button_id" value="P7Z9XGS8A8M76"/>
+<table>
+<tr><td><input type="hidden" name="on0" value="subscription options"/>subscription options</td></tr><tr><td><select name="os0">
+	<option value="Basic">Basic : $10.00 USD - monthly</option>
+	<option value="premium">premium : $15.00 USD - monthly</option>
+	<option value="plantinum">plantinum : $20.00 USD - monthly</option>
+</select> </td></tr>
+</table>
+<input type="hidden" name="currency_code" value="USD"/>
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_subscribeCC_LG.gif" name="submit" alt="PayPal - The safer, easier way to pay online!"/>
+<picture><img alt=""  src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1"/></picture>
+</form>
+
          </div>
         <div className={styles.grid}>
        
