@@ -24,7 +24,7 @@ if (typeof window !== 'undefined') {
 export default function App({ Component, pageProps }: AppProps) {
   const addPayPal = ()=>{
     const script = document.createElement("script");
-    script.src = "https://www.paypal.com/sdk/js?client-id=AdytsnuuQr8Ywn8oN1gbheEBaWJg688s0__2LiDIeWojycWBnbtfAUWUPVQhSCLQuPxO7Z1e9Mx0V9eE&enable-funding=venmo&currency=USD&vault=true&intent=subscription";
+    script.src = "https://www.paypal.com/sdk/js?client-id=AdqPhgLxkovLKCFYkPMl2kmuVy9En6qm7XEswIIzpES0fmHQxKbGoWM4TfsEksMEXoEcNIn6eLnNQ23Y&enable-funding=venmo&currency=USD&vault=true&intent=subscription";
     script.type = "text/javascript";
     script.async = true;
     document.body.appendChild(script);
