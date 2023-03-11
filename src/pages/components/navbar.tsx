@@ -26,9 +26,7 @@ useEffect(()=>{
     <button className={styles.loginBtn}>login</button>
 </div>
 </div>
-
-
-          
+        
 </>
     );
 }
