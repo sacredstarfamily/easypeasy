@@ -16,6 +16,10 @@ const PaymentSuccess: NextPage = () => {
     <div>
         
         <Link href="/">home</Link>
+        <form>
+            <input type="text" placeholder="email"/>
+           
+        </form>
     </div>
     );
    }else{

@@ -130,12 +130,12 @@ export default function Home() {
               Blog <span>-&gt;</span>
             </h2>
             <p className={inter.className}>
-              Find in-depth information about Next.js features and&nbsp;API.
+              Read popular blog posts from do-it-yourselfers
             </p>
           </a>
 
           <a
-            href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+            href="/howto"
             className={styles.card}
             target="_blank"
             rel="noopener noreferrer"

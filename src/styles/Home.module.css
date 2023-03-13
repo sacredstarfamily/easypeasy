@@ -56,6 +56,19 @@
   border: 5px solid purple;
   color: white;
 }
+.videoresponsive {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+}
+
+.videoresponsive iframe {
+  left: 0;
+  height: 80%;
+  width: 80%;
+  position: absolute;
+}
 .closeBtn{
   top:0px;
   margin-left:98%;
