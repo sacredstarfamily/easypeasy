@@ -6,7 +6,7 @@ import NavBar from './components/navbar'
 import { useEffect } from 'react'
 import {initializeApp} from 'firebase/app';
 import {getAnalytics}from 'firebase/analytics';
-import PaypalComponent from './components/paypalcomponent'
+import { ButtonWrapper } from './components/paypalcomponent'
 import Link from 'next/link'
 import {
   PayPalScriptProvider,
@@ -196,7 +196,16 @@ export default function Home() {
               with&nbsp;Vercel.
             </p>
           </a>
-          <PaypalComponent/>
+          <PayPalScriptProvider
+			options={{
+				"client-id": "AdytsnuuQr8Ywn8oN1gbheEBaWJg688s0__2LiDIeWojycWBnbtfAUWUPVQhSCLQuPxO7Z1e9Mx0V9eE",
+				components: "buttons",
+				intent: "subscription",
+				vault: true,
+			}}
+		>
+          <ButtonWrapper type="subscription"/>
+          </PayPalScriptProvider>
         </div>
       
       </main>
