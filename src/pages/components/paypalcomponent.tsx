@@ -12,7 +12,8 @@ const initialState = {
 const paypalScriptOptions: PayPalScriptOptions = {
     "client-id":
       "AdytsnuuQr8Ywn8oN1gbheEBaWJg688s0__2LiDIeWojycWBnbtfAUWUPVQhSCLQuPxO7Z1e9Mx0V9eE",
-   intent:"subscription"
+   intent:"subscription",
+   vault:true
    
    
   };
