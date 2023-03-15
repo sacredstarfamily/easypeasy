@@ -1,6 +1,10 @@
 import React from "react";
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 import { PayPalScriptOptions } from "@paypal/paypal-js/types/script-options";
+import { useEffect } from "react";
+import {
+	usePayPalScriptReducer
+} from "@paypal/react-paypal-js";
 const debug = true;
 
 const initialState = {
@@ -17,6 +21,35 @@ const paypalScriptOptions: PayPalScriptOptions = {
    
    
   };
+  const ButtonWrapper = ({ type }:any) => {
+	const [{ options }, dispatch] = usePayPalScriptReducer();
+
+	useEffect(() => {
+        dispatch({
+            type: "resetOptions",
+            value: {
+                ...options,
+                intent: "subscription",
+            },
+        });
+    }, [type,dispatch, options]);
+
+	return (<PayPalButtons
+		createSubscription={(data, actions) => {
+			return actions.subscription
+				.create({
+					plan_id: "P-3RX065706M3469222L5IFM4I",
+				})
+				.then((orderId) => {
+					// Your code here after create the order
+					return orderId;
+				});
+		}}
+		style={{
+			label: "subscribe",
+		}}
+	/>);
+}
 export default class PaypalComponent extends React.Component<{}, typeof initialState>{
     
     constructor(props: any) {
@@ -104,7 +137,13 @@ export default class PaypalComponent extends React.Component<{}, typeof initialS
                 </tr>
               </tbody>
             </table>
-            <PayPalScriptProvider options={paypalScriptOptions}>
+            <PayPalScriptProvider options={{
+				"client-id": "AdytsnuuQr8Ywn8oN1gbheEBaWJg688s0__2LiDIeWojycWBnbtfAUWUPVQhSCLQuPxO7Z1e9Mx0V9eE",
+				components: "buttons",
+				intent: "subscription",
+				vault: true,
+			}}>
+                <ButtonWrapper type="subscription"/>
               <PayPalButtons
                 createOrder={this.createOrder}
                 onApprove={this.onApprove}
