@@ -144,12 +144,7 @@ export default class PaypalComponent extends React.Component<{}, typeof initialS
 				vault: true,
 			}}>
                 <ButtonWrapper type="subscription"/>
-              <PayPalButtons
-                createOrder={this.createOrder}
-                onApprove={this.onApprove}
-                onError={this.onError}
-                onClick={this.onClick}
-              />
+            
             </PayPalScriptProvider>
           </div>
         );
