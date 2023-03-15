@@ -32,7 +32,7 @@ const paypalScriptOptions: PayPalScriptOptions = {
                 intent: "subscription",
             },
         });
-    }, [type,dispatch, options]);
+    }, [type]);
 
 	return (<PayPalButtons
 		createSubscription={(data, actions) => {
