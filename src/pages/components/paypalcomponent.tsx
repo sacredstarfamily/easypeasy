@@ -25,7 +25,7 @@ export const ButtonWrapper = ({ type }:any) => {
 				.create({
 					plan_id: "P-36D63407UL4725930MQHWNQA",
                    
-                    plan:{billing_scheme:[{"pricing_scheme":{"value":"15"}}]}
+                    
 				})
 				.then((orderId) => {
 					// Your code here after create the order
