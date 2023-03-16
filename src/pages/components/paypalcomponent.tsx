@@ -17,7 +17,7 @@ export const ButtonWrapper = ({ type }:any) => {
             },
         });
         
-    }, [type, dispatch, options]);
+    }, [type]);
 
 	return (<PayPalButtons
 		createSubscription={(data, actions) => {
