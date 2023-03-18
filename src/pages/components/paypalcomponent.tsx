@@ -8,16 +8,7 @@ import {
 export const ButtonWrapper = ({ type }:any) => {
 	const [{ options }, dispatch] = usePayPalScriptReducer();
 
-	useEffect(() => {
-        dispatch({
-            type: "resetOptions",
-            value: {
-                ...options,
-                intent: "subscription",
-            },
-        });
-        
-    }, [type]);
+	
 
 	return (<PayPalButtons
 		createSubscription={(data, actions) => {
