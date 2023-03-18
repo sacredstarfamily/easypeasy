@@ -211,6 +211,7 @@ export default function Home() {
 				})
 				.then((orderId) => {
 					// Your code here after create the order
+          console.log(orderId)
 					return orderId;
 				});
 		}}
