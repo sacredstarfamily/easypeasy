@@ -6,7 +6,7 @@ import NavBar from './components/navbar'
 import { useEffect } from 'react'
 import {initializeApp} from 'firebase/app';
 import {getAnalytics}from 'firebase/analytics';
-import { ButtonWrapper } from './components/paypalcomponent'
+
 import Link from 'next/link'
 import {
   PayPalScriptProvider,
