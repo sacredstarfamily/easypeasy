@@ -211,9 +211,10 @@ export default function Home() {
 				})
 				.then((orderId) => {
 					// Your code here after create the order
+          console.log(data);
           console.log(orderId)
 					return orderId;
-				});
+				}); 
 		}}
 		style={{
 			label: "subscribe",
