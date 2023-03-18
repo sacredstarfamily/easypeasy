@@ -204,7 +204,7 @@ export default function Home() {
 				vault: true,
 			}}
 		>
-          <ButtonWrapper type="subscription"/>
+        
           </PayPalScriptProvider>
         </div>
       
